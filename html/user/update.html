@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/image/favicon-16.png" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>회원정보수정</title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-wrap">
+        <a href="#"><img src="/image/logo-50.png" alt="logo-img" class="logo-img"></a>
+      </div>
+      <div class="title-wrap">
+          <p class="text">PLAYGROUND</p>
+      </div>
+      <div class="nav-wrap">
+        <nav class="dropdown">
+          <ul>
+            <li>
+              <a><img src="/image/menu-50.png" alt="menu-img" class="menu-img"></a>
+              <ul>
+                <li><a href="#"><span class="text">회원정보수정</span></a></li>
+                <li><a href="#"><span class="text">비밀번호변경</span></a></li>
+                <li><a href="#"><span class="text">로그아웃</span></a></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2 class="title">회원정보수정</h2>
+      <form method="post">
+        <fieldset class="fieldset-container wide">
+          <legend>개인 정보</legend>
+          <div class="photo-container">
+            <div class="preview-area">
+              <img class="preview" id="preview" alt="프로필 사진">
+            </div>
+
+            <label for="photo">프로필 사진</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required="required"/>
+          </div>
+
+          <label for="email">이메일</label>
+          <input class="mb-10" type="text" name="email" placeholder="이메일을 입력하세요" required="required" value="victoria.jihyeon@gmail.com" readonly />
+
+          <label for="nickname">닉네임</label>
+          <input class="mb-30" type="nickname" name="nickname" placeholder="닉네임을 입력하세요" required="required" value="victoria" />
+        </fieldset>
+        <div class="btn-wrap">
+          <button class="btn round" type="submit">수정하기</button>
+          <button class="btn cancel round" type="submit">취소</button>
+        </div>
+        <div class="link-wrap">
+          <span class="text">다음에 또 만나요!</span><a href="#">회원탈퇴</a>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <p class="copyright text"> © <time>2024</time> <a target="_blank" href="https://github.com/kwontory"><b>Jihyeon Kwon</b></a></p>
+      <p class="copyright text"> Icons by <a target="_blank" href="https://icons8.com/"><b>Icons8</b></a></p>  
+    </div>
+  </footer>
+
+  <script>
+    const previewArea = document.querySelector('.preview-area');
+    const fileInput = document.getElementById('photo');
+    const profilePreview = document.getElementById('preview');
+
+    previewArea.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    fileInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profilePreview.src = e.target.result;
+          profilePreview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+</html>

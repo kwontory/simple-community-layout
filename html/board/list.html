@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/image/favicon-16.png" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>스토리</title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-wrap">
+        <a href="#"><img src="/image/logo-50.png" alt="logo-img" class="logo-img"></a>
+      </div>
+      <div class="title-wrap">
+          <p class="text">PLAYGROUND</p>
+      </div>
+      <div class="nav-wrap">
+        <nav class="dropdown">
+          <ul>
+            <li>
+              <a><img src="/image/menu-50.png" alt="menu-img" class="menu-img"></a>
+              <ul>
+                <li><a href="#"><span class="text">회원정보수정</span></a></li>
+                <li><a href="#"><span class="text">비밀번호변경</span></a></li>
+                <li><a href="#"><span class="text">로그아웃</span></a></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2 class="title">우리들만의 PLAYGROUND</h2>
+      <div class="link-wrap">
+        <span>너의 스토리를 들려줘!</span><a href="#">스토리 작성하기</a>
+      </div>
+      <!-- 검색창 -->
+      <form class="search-form" method="post">
+        <div class="search-wrap">
+          <input class="search-input" type="text" name="search-text" placeholder="검색어를 입력하세요." />
+          <button type="button" class="search-btn">
+            <img class="search-icon" src="/image/search-48.png" alt="검색 돋보기 아이콘">
+          </button>
+        </div>
+      </form>
+      <ul class="card-container">
+        <li class="card-item" data-id="1">
+          <div class="card-content">
+            <h3 class="card-title">제목1</h3>
+            <div class="content-wrap">
+              <span class="likes">좋아요</span> 0
+              <span class="comments">댓글</span> 1
+              <span class="views">조회수</span> 1
+              <span class="date">2024-10-30</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="bottom-wrap">
+              <div class="user-profile-area"></div>
+              <span class="writer">더미 작성자</span>
+            </div>
+          </div>
+        </li>
+        <li class="card-item" data-id="2">
+          <div class="card-content">
+            <h3 class="card-title">제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2제목 2</h3>
+            <div class="content-wrap">
+              <span class="likes">좋아요</span> 0
+              <span class="comments">댓글</span> 1
+              <span class="views">조회수</span> 1
+              <span class="date">2024-10-30</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="bottom-wrap">
+              <div class="user-profile-area"></div>
+              <span class="writer">더미 작성자</span>
+            </div>
+          </div>
+        </li>
+        <li class="card-item" data-id="3">
+          <div class="card-content">
+            <h3 class="card-title">제목3</h3>
+            <div class="content-wrap">
+              <span class="likes">좋아요</span> 0
+              <span class="comments">댓글</span> 1
+              <span class="views">조회수</span> 1
+              <span class="date">2024-10-30</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="bottom-wrap">
+              <div class="user-profile-area"></div>
+              <span class="writer">더미 작성자</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <p class="copyright"> © <time>2024</time> <a target="_blank" href="https://github.com/kwontory"><b>Jihyeon Kwon</b></a></p>
+      <p class="copyright"> Icons by <a target="_blank" href="https://icons8.com/"><b>Icons8</b></a></p>  
+    </div>
+  </footer>
+
+  <script>
+    const cardContainer = document.querySelector('.card-container')
+    cardContainer.addEventListener('click', (event) => {
+      const cardItem = event.target.closest('.card-item')
+      if(!cardItem) return
+      const id = cardItem.dataset.id
+      console.log(id)
+    })
+  </script>
+</body>
+</html>

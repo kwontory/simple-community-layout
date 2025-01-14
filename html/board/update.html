@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/image/favicon-16.png" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>스토리</title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-wrap">
+        <a href="#"><img src="/image/logo-50.png" alt="logo-img" class="logo-img"></a>
+      </div>
+      <div class="title-wrap">
+          <p class="text">PLAYGROUND</p>
+      </div>
+      <div class="nav-wrap">
+        <nav class="dropdown">
+          <ul>
+            <li>
+              <a><img src="/image/menu-50.png" alt="menu-img" class="menu-img"></a>
+              <ul>
+                <li><a href="#"><span class="text">회원정보수정</span></a></li>
+                <li><a href="#"><span class="text">비밀번호변경</span></a></li>
+                <li><a href="#"><span class="text">로그아웃</span></a></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2 class="title">스토리 수정</h2>
+      <form method="post">
+        <fieldset class="fieldset-container wide">
+          <legend>글 작성</legend>
+          <label for="title">제목</label>
+          <input type="text" name="title" placeholder="제목을 입력하세요." required="required" />
+
+          <label for="content">내용</label>
+          <textarea name="content" id="content"></textarea>
+          <p class="helper-text">* helper text</p>
+ 
+          <label for="photo">이미지</label>
+          <input class="mb-30" type="file" name="photo" accept="image/*" />
+       </fieldset>
+        <div class="btn-wrap">
+          <button class="btn" type="submit">수정하기</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <p class="copyright"> © <time>2024</time> <a target="_blank" href="https://github.com/kwontory"><b>Jihyeon Kwon</b></a></p>
+      <p class="copyright"> Icons by <a target="_blank" href="https://icons8.com/"><b>Icons8</b></a></p>  
+    </div>
+  </footer>
+</body>
+</html>
